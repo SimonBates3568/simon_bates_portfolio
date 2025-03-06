@@ -2,7 +2,7 @@ import { Box, Link, HStack, Flex } from '@chakra-ui/react';
 
 const Navbar = () => {
     return (
-        <Box as="nav" bg="blue.800" color="white" py={2}>
+        <Box as="nav" bg="gray.900" color="white" py={2}>
             <Flex
                 direction={{ base: 'column', md: 'row' }}
                 align={{ base: 'center', md: 'center' }}
@@ -14,10 +14,10 @@ const Navbar = () => {
                     direction={{ base: 'column', md: 'row' }}
                     align={{ base: 'center', md: 'center' }}
                 >
-                    <Link href="/" _hover={{ color: 'teal.300' }}>Home</Link>
-                    <Link href="/About" _hover={{ color: 'teal.300' }}>About</Link>
-                    <Link href="/Portfolio" _hover={{ color: 'teal.300' }}>Projects</Link>
-                    <Link href="/Contact" _hover={{ color: 'teal.300' }}>Contact</Link>
+                    <Link href="/" _hover={{ color: 'cyan.400', textDecoration: 'underline' }}>Home</Link>
+                    <Link href="/About" _hover={{ color: 'cyan.400', textDecoration: 'underline' }}>About</Link>
+                    <Link href="/Portfolio" _hover={{ color: 'cyan.400', textDecoration: 'underline' }}>Projects</Link>
+                    <Link href="/Contact" _hover={{ color: 'cyan.400', textDecoration: 'underline' }}>Contact</Link>
                 </HStack>
             </Flex>
         </Box>

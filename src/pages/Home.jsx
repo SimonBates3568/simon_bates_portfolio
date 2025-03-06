@@ -106,7 +106,8 @@ const Home = () => {
       {/* Hero Content */}
       <Stack spacing={6} maxW="800px" textAlign="center" justifyContent="center" alignItems="center" p={4}>
         <Heading as="h1" size={["2xl", "3xl", "4xl"]}>
-          Welcome to Simon's Portfolio
+          Simon Bates
+          <br />Web Developer
         </Heading>
         <Blockquote showDash cite="Leiden" citeUrl="#"></Blockquote>
         <Button colorScheme="teal" size={["md", "lg"]} onClick={() => window.location.href = "/portfolio"}>View Projects</Button>
