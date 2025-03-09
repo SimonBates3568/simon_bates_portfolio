@@ -20,14 +20,21 @@
     "@react-pdf-viewer/core": "^3.12.0",
     "@react-pdf-viewer/default-layout": "^3.12.0",
     "@reduxjs/toolkit": "^2.5.1",
+    "axios": "^1.8.2",
+    "firebase": "^11.4.0",
     "framer-motion": "^7.10.3",
+    "openai": "^4.86.2",
     "react": "^18.2.0",
+    "react-confetti": "^6.4.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.5.0",
+    "react-parallax": "^3.5.1",
+    "react-parallax-tilt": "^1.7.286",
     "react-qr-code": "^2.0.15",
     "react-redux": "^9.2.0",
     "react-responsive-carousel": "^3.2.23",
-    "react-router-dom": "^7.1.5"
+    "react-router-dom": "^7.1.5",
+    "react-tilt": "^1.0.2"
   },
   "devDependencies": {
     "@types/react": "^18.0.17",

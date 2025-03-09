@@ -8,8 +8,13 @@ import ContactPage from './pages/ContactPage';
 import NavBar from '../src/components/ui/Navbar.jsx'; // Import the NavBar component
 import Footer from '../src/components/ui/Footer.jsx';
 import Home from './pages/Home';
+import Chatbot from "./components/Chatbot";
+import { Parallax } from 'react-parallax'; // Import Parallax
+import Confetti from 'react-confetti'; // Import Confetti
 
 const App = () => {
+  
+  
   return (
     <ChakraProvider>
       <Box display="flex" flexDirection="column" minHeight="100vh">
@@ -24,7 +29,9 @@ const App = () => {
             </Routes>
           </Router>
         </Box>
+     
         <Footer />
+        
       </Box>
     </ChakraProvider>
   );

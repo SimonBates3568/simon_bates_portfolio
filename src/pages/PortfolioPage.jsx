@@ -3,6 +3,7 @@ import { Box, Heading, Text, Image, Button, Grid, Card, CardBody } from '@chakra
 import { useState } from 'react';
 import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
+import Tilt from 'react-parallax-tilt'; // Import Tilt
 
 const PortfolioPage = () => {
   const projects = [
@@ -67,54 +68,63 @@ const PortfolioPage = () => {
     };
   
     return (
-      //overview of the projects
-      <Box p={5} maxW="1200px" mx="auto">
-      <Heading textAlign="center">Explore My Projects</Heading>
-      <Text mt={2} textAlign="center">
-        Welcome to my portfolio! Here are some of the projects I've worked on:
-      </Text>
-      
-      <Grid templateColumns="repeat(auto-fit, minmax(300px, 1fr))" gap={6} mt={4}>
-        {projects.map(project => (
-        <motion.div
-          key={project.id}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <Card>
-            <Image src={project.image} alt={project.title} />
-            <CardBody>
-              <Text mt={2} fontWeight="bold">{project.title}</Text>
-              <Text mt={2}>{project.description}</Text>
-              <Button mt={2} mr={2} as="a" href={project.code} target="_blank" rel="noopener noreferrer">View Code</Button>
-              <Button mt={2} mr={2} as="a" href={project.demoLink} target="_blank" rel="noopener noreferrer">View Live</Button>
-              <Button mt={2} onClick={() => openModal(project)}>More Details</Button>
-            </CardBody>
-          </Card>
-        </motion.div>
-        ))}
-      </Grid>
-      {/* //details of the projects */}
-      {selectedProject && (
-        <Modal isOpen={isOpen} onClose={closeModal}>
-        <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>{selectedProject.title}</ModalHeader>
-          <ModalCloseButton />
-          <ModalBody>
-          <Image src={selectedProject.image} alt={selectedProject.title} />
-          {selectedProject.image_1 && <Image src={selectedProject.image_1} alt={`${selectedProject.title} screenshot 1`} mt={4} />}
-          {selectedProject.image_2 && <Image src={selectedProject.image_2} alt={`${selectedProject.title} screenshot 2`} mt={4} />}
-          <Text mt={4}>{selectedProject.detail_description}</Text>
-          <Button mt={2} mr={2} as="a" href={selectedProject.code} target="_blank" rel="noopener noreferrer">View Code</Button>
-          <Button mt={2} mr={2} as="a" href={selectedProject.demoLink} target="_blank" rel="noopener noreferrer">View Live</Button>
-          </ModalBody>
-          <ModalFooter>
-          </ModalFooter>
-        </ModalContent>
-        </Modal>
-      )}
+      <Box 
+        p={5} 
+        maxW="1200px" 
+        mx="auto" 
+        backgroundImage="url('/public/images/background_image.jpg')" 
+        backgroundSize="cover" 
+        backgroundPosition="center"
+      >
+        <Heading textAlign="center">Explore My Projects</Heading>
+        <Image src="/public/images/create-a-doodle-of-my-name-simon-bates-for-my-web- (2).jpg" alt="Simon Bates" borderRadius="full" width={100} height={100}/>
+        <Text mt={2} textAlign="center">
+          Welcome to my portfolio! Here are some of the projects I've worked on:
+        </Text>
+        
+        <Grid templateColumns="repeat(auto-fit, minmax(300px, 1fr))" gap={6} mt={4}>
+          {projects.map(project => (
+          <motion.div
+            key={project.id}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+             <Tilt options={{ max: 25, scale: 1.05 }}>
+            <Card>
+              <Image src={project.image} alt={project.title} />
+              <CardBody>
+                <Text mt={2} fontWeight="bold">{project.title}</Text>
+                <Text mt={2}>{project.description}</Text>
+                <Button mt={2} mr={2} as="a" href={project.code} target="_blank" rel="noopener noreferrer">View Code</Button>
+                <Button mt={2} mr={2} as="a" href={project.demoLink} target="_blank" rel="noopener noreferrer">View Live</Button>
+                <Button mt={2} onClick={() => openModal(project)}>More Details</Button>
+              </CardBody>
+            </Card>
+            </Tilt>
+          </motion.div>
+          ))}
+        </Grid>
+        {selectedProject && (
+          <Modal isOpen={isOpen} onClose={closeModal}>
+          <ModalOverlay />
+          <ModalContent>
+            <ModalHeader>{selectedProject.title}</ModalHeader>
+            <ModalCloseButton />
+            <ModalBody>
+            <Image src={selectedProject.image} alt={selectedProject.title} />
+            {selectedProject.image_1 && <Image src={selectedProject.image_1} alt={`${selectedProject.title} screenshot 1`} mt={4} />}
+            {selectedProject.image_2 && <Image src={selectedProject.image_2} alt={`${selectedProject.title} screenshot 2`} mt={4} />}
+            <Text mt={4}>{selectedProject.detail_description}</Text>
+            <Button mt={2} mr={2} as="a" href={selectedProject.code} target="_blank" rel="noopener noreferrer">View Code</Button>
+            <Button mt={2} mr={2} as="a" href={selectedProject.demoLink} target="_blank" rel="noopener noreferrer">View Live</Button>
+            </ModalBody>
+            <ModalFooter>
+            </ModalFooter>
+          </ModalContent>
+          </Modal>
+        )}
       </Box>
+    
     );
 };
 

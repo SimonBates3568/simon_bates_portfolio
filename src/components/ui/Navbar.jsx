@@ -1,8 +1,10 @@
 import { Box, Link, HStack, Flex } from '@chakra-ui/react';
 
+
 const Navbar = () => {
     return (
         <Box as="nav" bg="gray.900" color="white" py={2}>
+         
             <Flex
                 direction={{ base: 'column', md: 'row' }}
                 align={{ base: 'center', md: 'center' }}

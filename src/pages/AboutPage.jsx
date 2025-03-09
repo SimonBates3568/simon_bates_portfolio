@@ -1,6 +1,5 @@
 import React from 'react';
-import { Box, Heading, Text, Avatar, Grid, GridItem, VStack, useColorModeValue, Divider, Button, Stack, Fade, SlideFade, Accordion } from '@chakra-ui/react';
-
+import { Box, Heading, Text, Avatar, Grid, GridItem, VStack, useColorModeValue, Divider, Button, Fade, SlideFade, Image } from '@chakra-ui/react';
 
 const AboutPage = () => {
   const bg = useColorModeValue('gray.50', 'gray.800');
@@ -9,7 +8,14 @@ const AboutPage = () => {
   const buttonBg = useColorModeValue('teal.500', 'teal.300');
 
   return (
-    <Box p={[2, 3, 5]} bg={bg} color={textColor}>
+    <Box
+      p={[2, 3, 5]}
+      bg={bg}
+      color={textColor}
+      backgroundImage="url('/public/images/background_image.jpg')"
+      backgroundSize="cover"
+      backgroundPosition="center"
+    >
       <Heading fontSize={['2xl', '3xl', '4xl']} textAlign="center" mb={5} fontFamily="Poppins, sans-serif">About Me</Heading>
 
       {/* About */}
@@ -17,12 +23,11 @@ const AboutPage = () => {
         <Box bg={sectionBg} p={5} borderRadius="md" mb={10} boxShadow="lg">
           <Grid templateColumns={['1fr', '1fr 3fr']} gap={6}>
             <GridItem>
-              <Avatar src="/public/images/simon.jpg" name="Simon Bates" size="2xl" />
+              <Image src="/public/images/simon.jpg" alt="Simon Bates"/>
             </GridItem>
             <GridItem>
               <VStack spacing={4} align="start">
                 <Heading fontSize={['xl', '2xl']} mb={2} fontFamily="Poppins, sans-serif">Professional Profile</Heading>
-                <Text fontSize={['sm', 'md']} fontFamily="Poppins, sans-serif"></Text>
                 <Text fontSize={['sm', 'md']} fontFamily="Poppins, sans-serif">
                   I have experience working on various projects and enjoy collaborating with others to bring ideas to life. I'm always looking for opportunities to grow and improve my skills.
                 </Text>
@@ -41,7 +46,9 @@ const AboutPage = () => {
       <Fade in transition={{ enter: { duration: 1.5 } }}>
         <Box bg={sectionBg} p={5} borderRadius="md" mb={10} boxShadow="lg">
           <Heading fontSize={['xl', '2xl']} mb={4} fontFamily="Poppins, sans-serif">Technologies I Use</Heading>
+         
           <VStack spacing={4} align="start">
+          <Image src="/public/images/create-a-picture-for-my-web-developer-portfolio-to (2).jpg" alt="Simon Bates"  width={200} height={200}/>
             <Text fontSize={['sm', 'md']} fontFamily="Poppins, sans-serif">
               <strong>Programming Languages:</strong> HTML5, CSS3, JavaScript
             </Text>
@@ -90,12 +97,11 @@ const AboutPage = () => {
                 <Text fontSize={['sm', 'md']} fontFamily="Poppins, sans-serif">
                   My vision is to be a web developer who is known for creativity, technical skills, and a willingness to learn. I want to be someone who businesses can rely on to help them achieve their online goals. By building strong relationships and delivering quality work, I hope to make a lasting impact in the industry.
                 </Text>
+                <Image src="/public/images/my_vision.jpg" alt="Simon Bates"  width={200} height={200}/>
               </VStack>
             </GridItem>
           </Grid>
-        
         </Box>
-     
       </SlideFade>
       
       <Divider my={10} />
