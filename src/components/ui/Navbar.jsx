@@ -19,6 +19,7 @@ const Navbar = () => {
                     <Link href="/" _hover={{ color: 'cyan.400', textDecoration: 'underline' }}>Home</Link>
                     <Link href="/About" _hover={{ color: 'cyan.400', textDecoration: 'underline' }}>About</Link>
                     <Link href="/Portfolio" _hover={{ color: 'cyan.400', textDecoration: 'underline' }}>Projects</Link>
+                    <Link href="/Certificates" _hover={{ color: 'cyan.400', textDecoration: 'underline' }}>Certificates</Link>
                     <Link href="/Contact" _hover={{ color: 'cyan.400', textDecoration: 'underline' }}>Contact</Link>
                 </HStack>
             </Flex>

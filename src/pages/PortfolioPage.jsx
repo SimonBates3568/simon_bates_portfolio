@@ -33,11 +33,11 @@ const PortfolioPage = () => {
       id: 3, 
       title: 'E-commerce Website', 
       description: 'An online store built with modern web technologies.', 
-      detail_description: 'In this project, I built a fully functional e-commerce website. The frontend was developed using React and Redux for state management, while the backend was powered by Node.js and MongoDB. I implemented features such as product listings, shopping cart, and checkout process. Payment integration was done using Stripe. This project helped me understand the complexities of building a scalable and secure e-commerce platform.', 
-      image: '/images/my-ecommerce-website.jpg', 
-      image_1: '/images/ecommerce_screenshot_1.png',
-      image_2: '/images/ecommerce_screenshot_2.png',
-      demoLink: 'https://example.com/my-ecommerce-website',
+      detail_description: 'This project was created using a boilerplate to better understand the structure and functionality of e-commerce websites. It provided valuable insights into managing product listings, user authentication, and payment processing. The experience helped me grasp the complexities involved in building a fully functional online store.', 
+      image: '/public/images/ecommerce_1.png', 
+      image_1: '/public/images/ecommerce_2.png',
+      image_2: '/public/images/ecommerce_3.png',
+      demoLink: 'https://simon-bates-e-commerce.netlify.app/',
       code: 'https://github.com/SimonBates3568/ecommerce-website.git'
     },
     { 
